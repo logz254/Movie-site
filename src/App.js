@@ -19,7 +19,11 @@ const App = () => {
 useEffect(()=>{
     searchMovies('Fast and Furious');
 }, []);
-
+//If Enter key is pressed, search for movie entered
+// (if (event.key==='Enter')
+// {
+//     onKeyDown={() => searchMovies(searchTerm)};
+// })
     return (
 
         <>
@@ -29,7 +33,9 @@ useEffect(()=>{
                 <input
                     placeholder='Search for movies'
                     value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value) } />
+                    onChange={(e) => setSearchTerm(e.target.value) }
+                    onKeyDown={()=> searchMovies(searchTerm)}
+                   />
                 <img
                     src={SearchIcon}
                     alt='search'
