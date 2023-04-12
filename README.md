@@ -8,4 +8,4 @@ A web application that allows users to search for movies and series that are cur
 - HTML
 - CSS
 - ReactJS
-- Omdbapi
+- OMDb API
